@@ -18,7 +18,6 @@ export async function getDreamInterpretation(dreamText) {
   try {
     const message = await openai.chat.completions.create({
       model,
-      max_tokens: 512,
       messages: [
         {
           role: 'system',
