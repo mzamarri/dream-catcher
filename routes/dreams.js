@@ -51,7 +51,7 @@ router.post('/', async (req, res) => {
       interpretation = await getDreamInterpretation(validation.value);
     } catch (aiError) {
       console.error('AI interpretation failed:', aiError);
-      return res.status(503).json({ 
+      return res.status(503).json({
         error: 'AI service temporarily unavailable.',
         type: 'ai_error'
       });
